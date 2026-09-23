@@ -2,9 +2,9 @@
 # Comparison & Visualisation — Paracetamol Reactor Study
 # =============================================================================
 
-source("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/R/02_batch_reactor.R")
-source("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/R/03_cstr_model.R")
-source("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/R/04_pfr_model.R")
+source("R code/02_batch_reactor.R")
+source("R code/03_cstr_model.R")
+source("R code/04_pfr_model.R")
 
 library(ggplot2)
 library(dplyr)
@@ -96,7 +96,7 @@ p1_pfr <- pfr_long %>%
 g1 <- arrangeGrob(p1_batch, p1_cstr, p1_pfr, ncol = 3,
                   top = grid::textGrob("Concentration Profiles — Paracetamol Synthesis",
                                        gp = grid::gpar(fontsize = 14, fontface = "bold")))
-ggsave("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/plots/01_concentration_profiles.png", g1, width = 15, height = 5, dpi = 180, type = "cairo")
+ggsave("Plots/01_concentration_profiles.png", g1, width = 15, height = 5, dpi = 180, type = "cairo")
 cat("  Saved: plots/01_concentration_profiles.png\n")
 
 # ===========================================================================
@@ -160,7 +160,7 @@ p_prod <- ggplot(all_kpi, aes(x = x, y = production_rate, color = reactor)) +
 g2 <- arrangeGrob(p2a, p2b, p2c, p2d, p_prod, ncol = 3,
                   top = grid::textGrob("Performance Metrics — Reactor Comparison",
                                        gp = grid::gpar(fontsize = 14, fontface = "bold")))
-ggsave("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/plots/02_performance_metrics.png", g2, width = 12, height = 9, dpi = 180, type = "cairo")
+ggsave("Plots/02_performance_metrics.png", g2, width = 12, height = 9, dpi = 180, type = "cairo")
 cat("  Saved: plots/02_performance_metrics.png\n")
 
 # ===========================================================================
@@ -196,7 +196,7 @@ p3b <- ggplot(pfr_sweep, aes(x = V_reactor)) +
 g3 <- arrangeGrob(p3a, p3b, ncol = 2,
                   top = grid::textGrob("Sensitivity Analysis — CSTR τ and PFR Volume",
                                        gp = grid::gpar(fontsize = 14, fontface = "bold")))
-ggsave("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/plots/03_sensitivity_analysis.png", g3, width = 12, height = 5, dpi = 180, type = "cairo")
+ggsave("Plots/03_sensitivity_analysis.png", g3, width = 12, height = 5, dpi = 180, type = "cairo")
 cat("  Saved: plots/03_sensitivity_analysis.png\n")
 
 # ===========================================================================
@@ -239,7 +239,7 @@ p4b <- ggplot(temp_df, aes(x = T - 273, y = S_intrinsic * 100)) +
 g4 <- arrangeGrob(p4a, p4b, ncol = 2,
                   top = grid::textGrob("Temperature Effects on Kinetics and Selectivity",
                                        gp = grid::gpar(fontsize = 14, fontface = "bold")))
-ggsave("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/plots/04_temperature_effects.png", g4, width = 12, height = 5, dpi = 180, type = "cairo")
+ggsave("Plots/04_temperature_effects.png", g4, width = 12, height = 5, dpi = 180, type = "cairo")
 cat("  Saved: plots/04_temperature_effects.png\n")
 
 # ===========================================================================
@@ -271,7 +271,7 @@ p5 <- ggplot(summary_df, aes(x = Metric, y = Value * 100, fill = Reactor)) +
   theme_paracetamol() +
   theme(legend.position = "right")
 
-ggsave("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/plots/05_summary_comparison.png", p5, width = 10, height = 6, dpi = 180, type = "cairo")
+ggsave("Plots/05_summary_comparison.png", p5, width = 10, height = 6, dpi = 180, type = "cairo")
 cat("  Saved: plots/05_summary_comparison.png\n")
 
 cat("\n--- All plots generated successfully. ---\n")
