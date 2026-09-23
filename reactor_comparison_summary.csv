@@ -1,0 +1,10 @@
+"Metric","Batch","CSTR","PFR"
+"Temperature_K",323,333,328
+"Temperature_C",50,60,55
+"ReactionTime_or_SpaceTime_min",60,30,33.33
+"Conversion_pct",99.89,88.29,99.65
+"Yield_pct",91.15,79.29,90.22
+"Selectivity_pct",91.248,89.813,90.544
+"Purity_mol_pct",91.248,89.813,90.544
+"Paracetamol_mol_L",0.9115,0.7929,0.9022
+"Impurity_mol_L",0.08742,0.08994,0.09422
