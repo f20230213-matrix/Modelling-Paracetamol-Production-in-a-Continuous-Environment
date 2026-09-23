@@ -10,7 +10,7 @@ cat("║   Batch vs Continuous CSTR vs PFR                               ║\n")
 cat("╚══════════════════════════════════════════════════════════════════╝\n\n")
 
 # Run all models and generate plots
-source("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/R/05_comparison_plots.R")
+source("R code/05_comparison_plots.R")
 
 # ===========================================================================
 # FINAL SUMMARY TABLE
@@ -67,14 +67,14 @@ results_summary <- data.frame(
             round(final_pfr$S_P*100,3), round(final_pfr$purity*100,3),
             round(final_pfr$CP,4), round(final_pfr$CI,5))
 )
-write.csv(results_summary, "C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/output/reactor_comparison_summary.csv", row.names = FALSE)
+write.csv(results_summary, "Output/reactor_comparison_summary.csv", row.names = FALSE)
 
 # Write full profiles
-write.csv(batch_results, "C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/output/batch_profile.csv", row.names = FALSE)
-write.csv(cstr_dynamic,  "C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/output/cstr_dynamic_profile.csv", row.names = FALSE)
-write.csv(pfr_results,   "C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/output/pfr_profile.csv", row.names = FALSE)
-write.csv(cstr_sweep,    "C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/output/cstr_tau_sweep.csv", row.names = FALSE)
-write.csv(pfr_sweep,     "C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/output/pfr_volume_sweep.csv", row.names = FALSE)
+write.csv(batch_results, "Output/batch_profile.csv", row.names = FALSE)
+write.csv(cstr_dynamic,  "Output/cstr_dynamic_profile.csv", row.names = FALSE)
+write.csv(pfr_results,   "Output/pfr_profile.csv", row.names = FALSE)
+write.csv(cstr_sweep,    "Output/cstr_tau_sweep.csv", row.names = FALSE)
+write.csv(pfr_sweep,     "Output/pfr_volume_sweep.csv", row.names = FALSE)
 
 cat("\n✓ CSV data files written to output/\n")
 
