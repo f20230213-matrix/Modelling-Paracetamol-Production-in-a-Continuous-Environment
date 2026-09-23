@@ -12,7 +12,7 @@
 #   dCI/dt =  r2
 # =============================================================================
 
-source("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/R/01_parameters.R")
+source("R code/01_parameters.R")
 library(deSolve)
 
 batch_odes <- function(t, state, parms) {
