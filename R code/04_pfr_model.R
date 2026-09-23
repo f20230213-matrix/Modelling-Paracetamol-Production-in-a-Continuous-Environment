@@ -15,7 +15,7 @@
 # (same ODE form as batch, but tau is spatial!)
 # =============================================================================
 
-source("C:/Users/inbox/Downloads/paracetamol_reactor_study/paracetamol_project/R/01_parameters.R")
+source("R code/01_parameters.R")
 library(deSolve)
 
 pfr_odes <- function(tau, state, parms) {
